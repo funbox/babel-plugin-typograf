@@ -34,7 +34,9 @@ module.exports = ({ types }) => ({
       compile(fullString, state.opts)
         .split(placeholder)
         .forEach((value) => {
-          quasis.push(types.templateElement({ cooked: value, raw: value }));
+          const escapedValue = value.replace(/([^\\])`/gi, '$1\\`');
+
+          quasis.push(types.templateElement({ cooked: escapedValue, raw: escapedValue }));
         });
 
       path.replaceWith(types.templateLiteral(quasis, path.get('quasi').node.expressions));
