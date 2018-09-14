@@ -1,5 +1,5 @@
 # Changelog
 
-## 0.1.0 (24.08.2018)
+## 0.1.0 (14.09.2018)
 
-* ...
+* Add `@funboxteam/babel-plugin-typograf`.
