@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    ["../../../../index.js", {
+      "ruleSettings": [
+        ["common/nbsp/beforeShortLastWord", "lengthLastWord", 8]
+      ],
+      "htmlEntity": {
+        "type": "name",
+        "onlyInvisible": true
+      }
+    }]
+  ]
+}

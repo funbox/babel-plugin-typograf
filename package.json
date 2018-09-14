@@ -11,6 +11,7 @@
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.0",
     "@babel/helper-plugin-test-runner": "7.0.1",
+    "@babel/plugin-transform-react-jsx": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@funboxteam/eslint-config": "4.0.0",
     "eslint": "5.3.0",

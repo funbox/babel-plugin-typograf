@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    ["../../../../index.js", {
+      "enableRules": [
+        "ru/money/ruble"
+      ]
+    }]
+  ]
+}

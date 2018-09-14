@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ["../../../../index.js", {
+      "htmlEntity": {
+        "type": "name",
+        "onlyInvisible": true
+      }
+    }]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    ["../../../../index.js", {
+      "disableRules": [
+        "common/punctuation/quote"
+      ]
+    }]
+  ]
+}

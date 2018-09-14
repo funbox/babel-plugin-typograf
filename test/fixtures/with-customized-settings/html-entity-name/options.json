@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    ["../../../../index.js", {
+      "htmlEntity": {
+        "type": "name"
+      }
+    }]
+  ]
+}
