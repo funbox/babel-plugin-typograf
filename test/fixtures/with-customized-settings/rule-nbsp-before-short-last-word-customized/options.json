@@ -2,7 +2,7 @@
   "plugins": [
     ["../../../../index.js", {
       "ruleSettings": [
-        ["common/nbsp/beforeShortLastWord", "lengthLastWord", 8]
+        ["common/nbsp/beforeShortLastWord", "lengthLastWord", 6]
       ],
       "htmlEntity": {
         "type": "name",
