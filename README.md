@@ -4,6 +4,15 @@ Babel-plugin for auto typografing text.
 
 [По-русски](./README.ru.md)
 
+To improve text the plugin uses [Typograf](https://github.com/typograf/typograf). The main features of this tool:
+
+* Trailing and double spaces removing.
+* Inserting non-breaking spaces.
+* Quotes conversion.
+* HTML-entities (`&nbsp;`, `&laquo;`, `&raquo;`, etc.) to Unicode-symbols conversion.
+
+[Available rules](https://github.com/typograf/typograf/blob/dev/docs/RULES.en-US.md) are described in the Typograf repo.
+
 ## Installation
 
 `npm i -D @funboxteam/babel-plugin-typograf`
