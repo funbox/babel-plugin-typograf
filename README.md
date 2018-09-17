@@ -52,6 +52,8 @@ plugins: [
 ]
 ```
 
+The plugin should be placed “above” other plugins that work with template literals (such as `plugin-transform-template-literals`) in `plugins` array, to make it possible to convert tagged templates earlier than regular template literals. 
+
 ## Usage
 
 Use this special template literal to typograf strings:

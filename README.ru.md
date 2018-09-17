@@ -51,6 +51,8 @@ plugins: [
 ]
 ```
 
+В секции `plugins`, `babel-plugin-typograf` должен быть выше других плагинов которые работают с `template literals` (например `plugin-transform-template-literals`), чтобы конвертирование tagged templates в обычные template literals, было выполнено раньше.
+
 ## Использование
 
 Для обозначения строк, в которые нужно добавить типографику, используется специальный tagged template:
