@@ -27,17 +27,27 @@ module.exports = ({ types }) => ({
 
       const quasis = [];
 
-      const fullString = path.get('quasi').get('quasis')
-        .map(el => el.node.value.cooked)
-        .join(placeholder);
+      let rawQuasis = [];
+      let cookedQuasis = [];
 
-      compile(fullString, state.opts)
-        .split(placeholder)
-        .forEach((value) => {
-          const escapedValue = value.replace(/([^\\])`/gi, '$1\\`');
-
-          quasis.push(types.templateElement({ cooked: escapedValue, raw: escapedValue }));
+      path.get('quasi').get('quasis')
+        .forEach((el) => {
+          rawQuasis.push(el.node.value.raw);
+          cookedQuasis.push(el.node.value.cooked);
         });
+
+      rawQuasis = compile(rawQuasis.join(placeholder), state.opts).split(placeholder);
+      cookedQuasis = compile(cookedQuasis.join(placeholder), state.opts).split(placeholder);
+
+      if (rawQuasis.length !== cookedQuasis.length) {
+        throw new Error('Raw and Cooked values diverge.');
+      }
+
+      rawQuasis.forEach((raw, index) => {
+        const cooked = cookedQuasis[index];
+
+        quasis.push(types.templateElement({ cooked, raw }));
+      });
 
       path.replaceWith(types.templateLiteral(quasis, path.get('quasi').node.expressions));
     },
