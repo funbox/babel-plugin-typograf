@@ -46,12 +46,13 @@ plugins: [
      
      // Rules settings
      ruleSettings: [
-       ["common/nbsp/beforeShortLastWord", "lengthLastWord", 8],
+       ['common/nbsp/beforeShortLastWord', 'lengthLastWord', 8],
      ],
   }],
 ]
 ```
 
+**Note**:
 The plugin should be placed “above” other plugins that work with template literals (such as `plugin-transform-template-literals`) in `plugins` array, to make it possible to convert tagged templates earlier than regular template literals. 
 
 ## Usage
@@ -66,3 +67,11 @@ T`Formatted "string".  `;
 // Tagged template with tag `T` is converted to a simple template literal
 `Formatted “string”.`;
 ```
+
+## Typograf rules
+
+Some rules are enabled by default in Typograf's config. [The list](https://github.com/typograf/typograf/blob/dev/docs/RULES.ru.md) of them you can find in the lib's repo.
+
+These rules are not recommended to enable:
+
+* `ru/money/ruble`.
