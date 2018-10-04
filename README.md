@@ -4,20 +4,40 @@ Babel-plugin for auto typografing text.
 
 [По-русски](./README.ru.md)
 
-To improve text the plugin uses [Typograf](https://github.com/typograf/typograf). The main features of this tool:
+To improve text the plugin uses [Typograf](https://github.com/typograf/typograf). 
+
+The plugin looks for the tagged templates with this tag
+
+```
+T`"string"`
+```
+
+Then typografs the text inside that convert them into the template literals:
+
+```
+`“string”`
+``` 
+
+### Main features of Typograf
 
 * Trailing and double spaces removing.
 * Inserting non-breaking spaces.
 * Quotes conversion.
 * HTML-entities (`&nbsp;`, `&laquo;`, `&raquo;`, etc.) to Unicode-symbols conversion.
 
-[Available rules](https://github.com/typograf/typograf/blob/dev/docs/RULES.en-US.md) are described in the Typograf repo.
+### Typograf rules
+
+Some rules are enabled by default in Typograf's config. 
+[The list](https://github.com/typograf/typograf/blob/dev/docs/RULES.ru.md) of them you can find in the lib's repo.
 
 ## Installation
 
 `npm i -D @funboxteam/babel-plugin-typograf`
 
 ## Configuration 
+
+**Note**:
+The plugin should be placed “above” other plugins that work with template literals (such as `plugin-transform-template-literals`) in `plugins` array, to make it possible to convert tagged templates earlier than regular template literals.
 
 Add plugin settings into your babel config:
 
@@ -39,7 +59,7 @@ plugins: [
        'common/nbsp/afterNumber',
      ],
      
-     // Here you can disabled typograf rules that are enabled by default
+     // Here you can disable Typograf rules that are enabled by default
      disableRules: [
        'common/punctuation/quote',
      ],
@@ -51,9 +71,6 @@ plugins: [
   }],
 ]
 ```
-
-**Note**:
-The plugin should be placed “above” other plugins that work with template literals (such as `plugin-transform-template-literals`) in `plugins` array, to make it possible to convert tagged templates earlier than regular template literals. 
 
 ## Usage
 
@@ -68,10 +85,6 @@ T`Formatted "string".  `;
 `Formatted “string”.`;
 ```
 
-## Typograf rules
-
-Some rules are enabled by default in Typograf's config. [The list](https://github.com/typograf/typograf/blob/dev/docs/RULES.ru.md) of them you can find in the lib's repo.
-
-These rules are not recommended to enable:
+### Do not turn on
 
 * `ru/money/ruble`.
