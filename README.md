@@ -85,6 +85,8 @@ T`Formatted "string".  `;
 `Formatted “string”.`;
 ```
 
-### Do not turn on
+#### Do not turn on
 
-* `ru/money/ruble`.
+These rules are not recommended to turn on:
+
+* `ru/money/ruble` — transforms `руб.` to `₽`. It's better to use the very `₽` to avoid transformation in the places where it isn't expected. E.g. in the dynamic texts where it's important to use `руб.`. Or in the markup where `₽` isn't displayed correctly due to fonts incompatibility.
