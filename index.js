@@ -1,13 +1,19 @@
 const Typograf = require('typograf');
 
+const restrictedDefaultRules = require('./restricted-default-rules');
+
 const placeholder = '__BABEL_PLUGIN_TYPOGRAF__';
 
 function compile(str, opts) {
   const locale = opts.locale || ['ru', 'en-US'];
   const htmlEntity = opts.htmlEntity || undefined;
   const enableRules = opts.enableRules || [];
-  const disableRules = opts.disableRules || [];
   const ruleSettings = opts.ruleSettings || [];
+
+  const disableRules = [
+    ...restrictedDefaultRules.filter(rule => !enableRules.includes(rule)),
+    ...(opts.disableRules || []),
+  ];
 
   const tp = new Typograf({ htmlEntity, locale });
 
