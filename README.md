@@ -92,3 +92,5 @@ These rules are not recommended to turn on:
 * `ru/money/ruble` — transforms `руб.` to `₽`. It's better to use the very `₽` to avoid transformation in the places where it isn't expected. E.g. in the dynamic texts where it's important to use `руб.`. Or in the markup where `₽` isn't displayed correctly due to fonts incompatibility.
 
 * `common/space/delBeforePunctuation` — removes spaces before punctuation signs. But there's a bug. E.g. the phrase «We need a .Net developer.» will be transformed into «We need a.Net developer.». Right now there's no fix for this issue, but, [maybe](https://github.com/typograf/typograf/issues/312) later it will be possible to create a list of exceptions.
+
+* `common/space/afterPunctuation` — adds space after punctuation signs. But sometimes adds it when you don't expect it to see. E.g. `comma sign “,”.` will be transformed into `comma sign “, ”.`, which will break `common/punctuation/quote` and the result will be `comma sign “, “.`.
