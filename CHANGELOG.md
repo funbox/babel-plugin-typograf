@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 (31.01.2018)
+
+* Disable not recommended rules.
+* Add rule `common/space/afterPunctuation` into the “Do not turn on” section.
+
 ## 1.2.0 (31.01.2018)
 
 * Add rule `common/space/delBeforePunctuation` into the “Do not turn on” section.
