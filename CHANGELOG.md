@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 (31.01.2018)
+
+* Add rule `common/space/delBeforePunctuation` into the “Do not turn on” section.
+
 ## 1.1.0 (12.10.2018)
 
 * Improve `ru/money/ruble` description in README.
