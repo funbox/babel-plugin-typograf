@@ -2,4 +2,5 @@
 
 module.exports = [
   'common/space/afterPunctuation',
+  'common/space/delBeforePunctuation',
 ];
