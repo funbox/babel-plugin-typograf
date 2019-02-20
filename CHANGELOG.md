@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 (20.02.2019)
+
+* Disable rule `common/space/delBeforePunctuation`.
+
 ## 1.3.0 (31.01.2018)
 
 * Disable not recommended rules.
