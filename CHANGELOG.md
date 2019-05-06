@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0 (06.05.2019)
+
+* Update typograf to 6.8.2.
+
 ## 1.4.0 (20.02.2019)
 
 * Disable rule `common/space/delBeforePunctuation`.
