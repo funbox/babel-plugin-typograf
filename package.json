@@ -18,6 +18,6 @@
     "jest": "23.6.0"
   },
   "dependencies": {
-    "typograf": "6.7.2"
+    "typograf": "6.8.2"
   }
 }
