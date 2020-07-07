@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0 (07.07.2020)
+
+* Add LICENSE file.
+* Improve package description in README and package.json.
+* Prepare package to publish on GitHub.
+
 ## 1.5.0 (06.05.2019)
 
 * Update typograf to 6.8.2.
