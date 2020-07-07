@@ -1,11 +1,29 @@
 {
   "name": "@funboxteam/babel-plugin-typograf",
   "version": "1.5.0",
-  "description": "Typograf Babel Plugin",
+  "description": "Babel plugin for enhancing text punctuation and readability",
+  "keywords": [
+    "babel",
+    "plugin",
+    "typograf"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funbox/babel-plugin-typograf"
+  },
+  "files": [
+    "index.js",
+    "restricted-default-rules.js"
+  ],
+  "author": "Mikhail Donskoy <m.donskoy@yandex.ru> (https://github.com/mdnsk)",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint --cache -c .eslintrc index.js"
+  },
+  "dependencies": {
+    "typograf": "6.8.2"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0",
@@ -13,11 +31,8 @@
     "@babel/helper-plugin-test-runner": "7.0.1",
     "@babel/plugin-transform-react-jsx": "7.0.0",
     "@babel/preset-env": "7.0.0",
-    "@funboxteam/eslint-config": "4.0.0",
+    "@funboxteam/eslint-config": "5.0.0",
     "eslint": "5.3.0",
     "jest": "23.6.0"
-  },
-  "dependencies": {
-    "typograf": "6.8.2"
   }
 }
