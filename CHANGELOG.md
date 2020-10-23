@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0 (23.10.2020)
+
+* Add type declarations.
+
 ## 2.0.0 (07.07.2020)
 
 * Add LICENSE file.

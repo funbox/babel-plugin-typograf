@@ -1,6 +1,6 @@
 {
   "name": "@funboxteam/babel-plugin-typograf",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Babel plugin for enhancing text punctuation and readability",
   "keywords": [
     "babel",
@@ -12,12 +12,14 @@
     "url": "https://github.com/funbox/babel-plugin-typograf"
   },
   "files": [
+    "index.d.ts",
     "index.js",
     "restricted-default-rules.js"
   ],
   "author": "Mikhail Donskoy <m.donskoy@yandex.ru> (https://github.com/mdnsk)",
   "license": "MIT",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest",
     "lint": "eslint --cache -c .eslintrc index.js"
