@@ -30,11 +30,11 @@
   "devDependencies": {
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.0",
-    "@babel/helper-plugin-test-runner": "7.0.1",
+    "@babel/helper-plugin-test-runner": "7.13.10",
     "@babel/plugin-transform-react-jsx": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@funboxteam/eslint-config": "5.0.0",
     "eslint": "5.3.0",
-    "jest": "23.6.0"
+    "jest": "26.6.3"
   }
 }
