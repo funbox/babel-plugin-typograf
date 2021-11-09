@@ -21,8 +21,9 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "jest",
-    "lint": "eslint --cache -c .eslintrc index.js"
+    "lint": "eslint --cache -c .eslintrc index.js",
+    "prepublishOnly": "lawyer",
+    "test": "jest"
   },
   "dependencies": {
     "typograf": "6.8.2"
