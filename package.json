@@ -22,7 +22,7 @@
   "types": "index.d.ts",
   "scripts": {
     "lint": "eslint --cache -c .eslintrc index.js",
-    "prepublishOnly": "lawyer",
+    "prepublishOnly": "if [ -z \"$CI\" ]; then lawyer; fi",
     "test": "jest"
   },
   "dependencies": {
